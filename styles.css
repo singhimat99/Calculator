@@ -1,0 +1,71 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  border: 2px solid black;
+  width: 40vw;
+  height: 50vw;
+  /* border-radius: 10%; */
+  background-color: darkgray;
+  display: grid;
+  font-size: 5vw;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 2fr 0.75fr 4fr;
+  grid-template-areas:
+    "textArea textArea"
+    "acAndDlt operators"
+    "numbers operators";
+}
+
+div {
+  border: 1px solid black;
+}
+
+.textareaContainer {
+  grid-area: textArea;
+}
+textarea {
+  /* font-size: 5vw; */
+  resize: none;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: gray;
+}
+.operatorsContainer {
+  grid-area: operators;
+}
+.acAndDltContainer {
+  grid-area: acAndDlt;
+}
+.numbersContainer {
+  flex-flow: column-reverse;
+  grid-area: numbers;
+  display: flex;
+}
+li {
+  background-color: rgb(5, 113, 221);
+  list-style-type: none;
+  width: 100%;
+  height: 100%;
+}
+li:hover {
+  background-color: rgb(138, 228, 250);
+}
+.operators {
+  flex-flow: column;
+}
+ul {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  vertical-align: middle;
+}
