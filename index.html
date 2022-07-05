@@ -10,42 +10,44 @@
   <body>
     <div class="container">
       <div class="textareaContainer">
-        <textarea name="display" id="" cols="30" rows="10"></textarea>
+        <!-- <textarea name="display" id="" cols="30" rows="10"></textarea> -->
+        <div data-previous-operand class="displayTop"></div>
+        <div data-current-operand class="displayBottom"></div>
       </div>
       <div class="numbersContainer">
         <ul>
-          <li>.</li>
-          <li>0</li>
+          <li class="number">.</li>
+          <li class="number">0</li>
         </ul>
         <ul>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
+          <li class="number">1</li>
+          <li class="number">2</li>
+          <li class="number">3</li>
         </ul>
         <ul>
-          <li>4</li>
-          <li>5</li>
-          <li>6</li>
+          <li class="number">4</li>
+          <li class="number">5</li>
+          <li class="number">6</li>
         </ul>
         <ul>
-          <li>7</li>
-          <li>8</li>
-          <li>9</li>
+          <li class="number">7</li>
+          <li class="number">8</li>
+          <li class="number">9</li>
         </ul>
       </div>
       <div class="operatorsContainer">
         <ul class="operators">
-          <li class="operator">÷</li>
-          <li class="operator">x</li>
-          <li class="operator">-</li>
-          <li class="operator">+</li>
-          <li class="operator">=</li>
+          <li data-operation class="operator">÷</li>
+          <li data-operation class="operator">*</li>
+          <li data-operation class="operator">-</li>
+          <li data-operation class="plusOperator">+</li>
+          <li data-equals class="operator">=</li>
         </ul>
       </div>
       <div class="acAndDltContainer">
         <ul>
-          <li>AC</li>
-          <li>D</li>
+          <li data-allClear>AC</li>
+          <li data-delete>D</li>
         </ul>
       </div>
     </div>

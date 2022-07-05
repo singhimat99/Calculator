@@ -13,33 +13,42 @@ body {
   display: grid;
   font-size: 5vw;
   grid-template-columns: 3fr 1fr;
-  grid-template-rows: 2fr 0.75fr 4fr;
+  grid-template-rows: minmax(150px, auto) repeat(5, 1fr);
   grid-template-areas:
     "textArea textArea"
     "acAndDlt operators"
+    "numbers operators"
+    "numbers operators"
+    "numbers operators"
     "numbers operators";
-}
-
-div {
-  border: 1px solid black;
 }
 
 .textareaContainer {
   grid-area: textArea;
+  background-color: rgb(14, 40, 160);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  word-wrap: break-word;
+  word-break: break-all;
+  padding: 10px;
 }
-textarea {
-  /* font-size: 5vw; */
-  resize: none;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  background-color: gray;
+.textareaContainer .displayBottom {
+  color: aliceblue;
+  font-size: 1em;
 }
+.textareaContainer .displayTop {
+  color: rgba(225, 225, 225, 0.846);
+  font-size: 0.75em;
+}
+
 .operatorsContainer {
   grid-area: operators;
 }
 .acAndDltContainer {
   grid-area: acAndDlt;
+  /* height: 80%; */
 }
 .numbersContainer {
   flex-flow: column-reverse;
